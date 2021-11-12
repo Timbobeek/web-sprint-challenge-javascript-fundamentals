@@ -26,13 +26,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map() ---> Returns a new array, calls back each element, index and returns each in turn. You would use it when manipulating/reshaping data: when you are given data and you need to do something to change it WITHOUT altering the original array.
+
+.reduce() ----> Returns a new array, takes a callback which is a reducer function, reducer function takes previous value (accumulator) and next value (currentValue). Biggest feature is that .reduce() returns a single value. You would use it when you have a big dataset and want to turn it into a single piece of data (ex: average, sum, etc.).
+
+.filter() ----> Returns a new array, calls back each element, index and returns each in turn. It takes a callback that runs a 'truth' test: if true, returns the elements, else ignores. You would use it for filtering out an array by a specific condition (ex: when you only want names that start with an 'a').
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that accepts other functions as its arguments. 
+A callback function is a function that is passed into other functions as an argument.
 
 3. Explain what a closure is.
 
+Closure happens when a function is referencing some sort of variable outside of its context. It is the ability to access functions from a parent level scope in child level scope even after the parent function has been terminated. 
+
 4. Describe the four principles of the 'this' keyword.
 
+  - Window/Global Object binding - when in global scope, the value of 'this' will be the window or console object (in this case, 'this' is without context)
+  
+  - Implicit Binding - whenever a preceding dot calls a function, the object before the dot is 'this'
+  
+  - New Binding - when a function is invoked as a constructor function, 'this' points to the newly created object (whenever a constructor function is used, 'this' refers to the specific instance of the object that is created and returned by teh constructor function)
+  
+  - Explicit Binding- when we explicitly pass in what we want 'this' to refer to using .call, .apply, .bind
+
 5. Why do we need super() in an extended class?
+
+It tells a parent's constructor to be concerned with the child's attributes and abstracts away the 'Object.create(this,Class)' syntax that is harder to understand.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
